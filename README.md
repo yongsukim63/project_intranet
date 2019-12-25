@@ -33,7 +33,7 @@
   <h3>2) 핵심 기술</h3>
   <h4>JFrame UI 구현<br>
      Database 설계<br>
-     JDBC를 이용한 Database 연동<br></h4>
+     JDBC를 이용한 Database 연동<br></h4><br>
 	
 <h2>4. 프로그램 구성</h2>
 <img src = "https://user-images.githubusercontent.com/41276647/71144802-a6468400-2262-11ea-82b5-a9b8a95db705.png" width = "90%"></img>
