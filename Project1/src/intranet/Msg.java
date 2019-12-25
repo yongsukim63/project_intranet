@@ -568,6 +568,21 @@ public class Msg extends javax.swing.JFrame {
 
 	private void mr_btBacktoListActionPerformed(java.awt.event.ActionEvent evt) {
 		int currentTab = mm_tpList.getSelectedIndex();
+		MsgVO tempVO = null;
+		try {
+			if (currentTab == 0) {
+				Integer id = tabRcvList.getSelectedRow();
+				tempVO = rcvMsgList.get(id.intValue());
+			} else {
+				Integer id = tabSendList.getSelectedRow();
+				tempVO = sendMsgList.get(id.intValue());
+			}
+			int selectedMsgId = tempVO.getMsgid();
+			
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+		}
+		
 		reflashTable(currentTab);
 		card.show(pMsg, "card1");
 	} // ----------------------------------------완료

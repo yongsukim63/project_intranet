@@ -40,13 +40,13 @@ public class MsgDAO {
 
 
 	/**
-	 * ÇÑÁÙ ¸Ş¸ğ±ÛÀ» µî·ÏÇÏ´Â ¸Ş¼Òµå - insert ¹®À» ¼öÇà
+	 * í•œì¤„ ë©”ëª¨ê¸€ì„ ë“±ë¡í•˜ëŠ” ë©”ì†Œë“œ - insert ë¬¸ì„ ìˆ˜í–‰
 	 */
 	public int getLastId() {
 		try {
 			int id=0;
 			con=DBUtil.getCon();
-			// select¹® ÀÛ¼º
+			// selectë¬¸ ì‘ì„±
 			String sql="select max(msgid) msgid from "+msgTableName;
 			ps=con.prepareStatement(sql);
 			rs=ps.executeQuery();
@@ -56,7 +56,7 @@ public class MsgDAO {
 			return id;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return -1;	// ¿À·ù ¹ß»ı½Ã´Â À½¼ö·Î ¹İÈ¯
+			return -1;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” ìŒìˆ˜ë¡œ ë°˜í™˜
 		} finally {
 			close();
 		}
@@ -79,7 +79,7 @@ public class MsgDAO {
 	public ArrayList<MsgVO> listMsg(String s_R){
 		try {
 			con=DBUtil.getCon();
-			// select¹® ÀÛ¼º
+			// selectë¬¸ ì‘ì„±
 			String sql="select msgid, s_r, empid, ename, title, "
 					+ "rpad(msg,100,' ') msg, sdate, rd  from "
 					+msgTableName+"_view "
@@ -91,7 +91,7 @@ public class MsgDAO {
 			return vo;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return null;	// ¿À·ù ¹ß»ı½Ã´Â nullÀ» ¹İÈ¯
+			return null;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” nullì„ ë°˜í™˜
 		} finally {
 			close();
 		}
@@ -100,14 +100,14 @@ public class MsgDAO {
 	public ArrayList<MsgVO> findMsg(int type, String s_R, String keyword){
 		/*
 		 * type
-		 * 0: »ç¿ø¹øÈ£(ÀÛ¼ºÀÚ/¼ö½ÅÀÚ)·Î °Ë»ö, ¿À¹ö·Îµù
-		 * 1. ÀÛ¼ºÀÚ·Î °Ë»ö, 
-		 * 2: ÀÛ¼ºÀÏ·Î °Ë»ö
-		 * 3: ¸Ş¸ğ³»¿ëÀ¸·Î °Ë»ö
+		 * 0: ì‚¬ì›ë²ˆí˜¸(ì‘ì„±ì/ìˆ˜ì‹ ì)ë¡œ ê²€ìƒ‰, ì˜¤ë²„ë¡œë”©
+		 * 1. ì‘ì„±ìë¡œ ê²€ìƒ‰, 
+		 * 2: ì‘ì„±ì¼ë¡œ ê²€ìƒ‰
+		 * 3: ë©”ëª¨ë‚´ìš©ìœ¼ë¡œ ê²€ìƒ‰
 		 */
 		try{
 			con=DBUtil.getCon();
-			//whereÀıÀ» °®´Â select¹® ÀÛ¼º
+			//whereì ˆì„ ê°–ëŠ” selectë¬¸ ì‘ì„±
 			String sql="select msgid, ename, s_r, empid, title, rpad(msg,100,' ') msg, sdate, rd "
 					+"from "+msgTableName+"_view where s_r= ? and ";
 			String colName="";
@@ -135,17 +135,17 @@ public class MsgDAO {
 			return vo;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return null;	// ¿À·ù ¹ß»ı½Ã´Â nullÀ» ¹İÈ¯
+			return null;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” nullì„ ë°˜í™˜
 		} finally {
 			close();
 		}
 	}
 	
 	public ArrayList<MsgVO> findMsg(String s_R, int empID){
-		// 0: »ç¿ø¹øÈ£(ÀÛ¼ºÀÚ/¼ö½ÅÀÚ)·Î °Ë»ö
+		// 0: ì‚¬ì›ë²ˆí˜¸(ì‘ì„±ì/ìˆ˜ì‹ ì)ë¡œ ê²€ìƒ‰
 		try{
 			con=DBUtil.getCon();
-			//whereÀıÀ» °®´Â select¹® ÀÛ¼º
+			//whereì ˆì„ ê°–ëŠ” selectë¬¸ ì‘ì„±
 			String sql="select msgid, ename, s_r, empid, title, rpad(msg,100,' ') msg, sdate, rd "
 					+"from "+msgTableName+"_view where empid =? and s_r=?";
 			ps=con.prepareStatement(sql);
@@ -157,7 +157,7 @@ public class MsgDAO {
 			return vo;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return null;	// ¿À·ù ¹ß»ı½Ã´Â nullÀ» ¹İÈ¯
+			return null;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” nullì„ ë°˜í™˜
 		} finally {
 			close();
 		}
@@ -167,7 +167,7 @@ public class MsgDAO {
 		try {
 			con=DBUtil.getCon();
 			String tableName = "msg"+empId;
-			// insert¹® ÀÛ¼º
+			// insertë¬¸ ì‘ì„±
 			String sql="insert into "+tableName
 					+" values("+tableName+"_seq.nextval,?,?,?,?,sysdate,?)";
 			// System.out.println(msg.toString());
@@ -184,7 +184,26 @@ public class MsgDAO {
 			return n;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return -1;	// ¿À·ù ¹ß»ı½Ã´Â À½¼ö·Î ¹İÈ¯
+			return -1;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” ìŒìˆ˜ë¡œ ë°˜í™˜
+		} finally {
+			close();
+		}
+	}
+	
+	public int updateMsg(int msgId, int empId) {
+		try {
+			con=DBUtil.getCon();
+			String tableName = "msg"+empId;
+			// updateë¬¸ ì‘ì„±
+			String sql="update "+tableName+" set s_r=RD where msgid=?)";
+			ps=con.prepareStatement(sql);
+			ps.setInt(1, msgId);
+			
+			int n=ps.executeUpdate();
+			return n;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return -1;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” ìŒìˆ˜ë¡œ ë°˜í™˜
 		} finally {
 			close();
 		}
@@ -193,7 +212,7 @@ public class MsgDAO {
 	public int deleteMsg(Integer msgid) {
 		try {
 			con=DBUtil.getCon();
-			// delete¹® ÀÛ¼º
+			// deleteë¬¸ ì‘ì„±
 			String sql="delete from "+msgTableName+" where msgid=?";
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, msgid);
@@ -201,7 +220,7 @@ public class MsgDAO {
 			return n;
 		} catch (SQLException e) {
 			e.printStackTrace();
-			return -1;	// ¿À·ù ¹ß»ı½Ã´Â À½¼ö·Î ¹İÈ¯
+			return -1;	// ì˜¤ë¥˜ ë°œìƒì‹œëŠ” ìŒìˆ˜ë¡œ ë°˜í™˜
 		} finally {
 			close();
 		}
