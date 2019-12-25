@@ -38,7 +38,6 @@ public class MsgDAO {
 		} catch (Exception e) {}
 	}//---------------------------------
 
-
 	/**
 	 * 한줄 메모글을 등록하는 메소드 - insert 문을 수행
 	 */
@@ -171,7 +170,7 @@ public class MsgDAO {
 			String sql="insert into "+tableName
 					+" values("+tableName+"_seq.nextval,?,?,?,?,sysdate,?)";
 			ps=con.prepareStatement(sql);
-			System.out.println(sql);
+			//System.out.println(sql);
 			ps.setString(1, msg.getS_R());
 			ps.setInt(2, msg.getEmpid());
 			ps.setString(3, msg.getTitle());

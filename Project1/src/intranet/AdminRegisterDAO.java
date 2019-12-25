@@ -10,7 +10,7 @@ public class AdminRegisterDAO {
 	PreparedStatement ps;
 	ResultSet rs;
 	
-	/**사원 정보 추가*/
+	/**사원 정보 추가*/ 
 	public int insertRegister(AdminRegisterVO vo) {
 		try {
 			con=DBUtil.getCon();

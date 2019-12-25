@@ -656,6 +656,7 @@ public class Msg extends javax.swing.JFrame {
 		tempVO.setS_R("R");
 		tempVO.setrD("NR");
 		tempVO.setEmpid(ownerId);
+		
 		n = dao.insertMsg(tempVO, selectedEmpId);
 		// 본인의 보낸메시지 리스트 출력하기
 		sendMsgList = dao.listMsg("S");

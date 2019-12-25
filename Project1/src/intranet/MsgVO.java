@@ -60,7 +60,6 @@ public class MsgVO {
 	public void setrD(String rD) {
 		this.rD = rD;
 	}
-	
 	public MsgVO(String s_R, int empid, String title, String msg, String rD) {
 		super();
 		this.s_R = s_R;
@@ -69,7 +68,6 @@ public class MsgVO {
 		this.msg = msg;
 		this.rD = rD;
 	}
-	
 	public MsgVO(int msgid, String s_R, int empid, String ename, String title, String msg, Date sdate, String rD) {
 		super();
 		this.msgid = msgid;
