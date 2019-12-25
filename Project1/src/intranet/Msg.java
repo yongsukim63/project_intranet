@@ -76,8 +76,8 @@ public class Msg extends javax.swing.JFrame {
 	}
 
 	public void showTable(ArrayList<MsgVO> arr, javax.swing.JTable tabList, int s_R) {
-		// 5. DefaultTableModel ��ü �����ؼ� ���
-		// 6. table �� ����
+		// 1. DefaultTableModel 객체 생성해서 담기
+    	// 2. table 모델 설정
 		Object[][] tableContents = new Object[arr.size()][5];
 		for (int i = 0; i < tableContents.length; i++) {
 			MsgVO msg = arr.get(i);
