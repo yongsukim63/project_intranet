@@ -578,8 +578,10 @@ public class Msg extends javax.swing.JFrame {
 				tempVO = sendMsgList.get(id.intValue());
 			}
 			int selectedMsgId = tempVO.getMsgid();
-			
-
+			int r = dao.readMsg(selectedMsgId, ownerId);
+			if (r == -1) {
+				JOptionPane.showMessageDialog(this, "이미 지워졌거나 없는 쪽지입니다.");
+			}
 		} catch (ArrayIndexOutOfBoundsException e) {
 		}
 		

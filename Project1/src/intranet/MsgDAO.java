@@ -190,15 +190,14 @@ public class MsgDAO {
 		}
 	}
 	
-	public int updateMsg(int msgId, int empId) {
+	public int readMsg(int msgId, int empId) {
 		try {
 			con=DBUtil.getCon();
 			String tableName = "msg"+empId;
 			// update문 작성
-			String sql="update "+tableName+" set s_r=RD where msgid=?)";
+			String sql="update "+tableName+" set rd='RD' where msgid=?";
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, msgId);
-			
 			int n=ps.executeUpdate();
 			return n;
 		} catch (SQLException e) {
