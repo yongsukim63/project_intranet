@@ -3,14 +3,14 @@ package intranet;
 import java.sql.Date;
 
 public class MsgVO {
-	private int msgid; // ±Û¹øÈ£
-	private String s_R; // º¸³»±â/¹Ş±â
-	private int empid; // º¸³½»ç¶÷/¹ŞÀº»ç¶÷ id
-	private String ename; // º¸³½»ç¶÷/¹ŞÀº»ç¶÷
-	private String title; // ¸Ş¸ğ Á¦¸ñ
-	private String msg; // ¸Ş¸ğ³»¿ë
-	private java.sql.Date sdate; // ÀÛ¼ºÀÏ
-	private String rD; // ÀĞÀº»óÅÂ
+	private int msgid; // ê¸€ë²ˆí˜¸
+	private String s_R; // ë³´ë‚´ê¸°/ë°›ê¸°
+	private int empid; // ë³´ë‚¸ì‚¬ëŒ/ë°›ì€ì‚¬ëŒ id
+	private String ename; // ë³´ë‚¸ì‚¬ëŒ/ë°›ì€ì‚¬ëŒ
+	private String title; // ë©”ëª¨ ì œëª©
+	private String msg; // ë©”ëª¨ë‚´ìš©
+	private java.sql.Date sdate; // ì‘ì„±ì¼
+	private String rD; // ì½ì€ìƒíƒœ
 	
 	public int getMsgid() {
 		return msgid;

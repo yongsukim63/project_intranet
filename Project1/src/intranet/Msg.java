@@ -651,9 +651,10 @@ public class Msg extends javax.swing.JFrame {
 		// 본인의 msg 테이블에 보낸 메시지 추가하기
 		int n = dao.insertMsg(tempVO, ownerId);
 		// System.out.println(n);
-		// 받 사람 msg 테이블에 받은 메시지 추가하기
+		// 받은 사람 msg 테이블에 받은 메시지 추가하기
 
 		tempVO.setS_R("R");
+		tempVO.setrD("NR");
 		tempVO.setEmpid(ownerId);
 		n = dao.insertMsg(tempVO, selectedEmpId);
 		// 본인의 보낸메시지 리스트 출력하기

@@ -331,6 +331,22 @@ public class AdminRegister extends javax.swing.JFrame {
 			} else {
 				showMessage("사원 정보 등록 실패");
 			}
+			String msgTableName="msg"+id;
+			cnt = dao.createMsgTable(msgTableName);
+			if (cnt > 0) {
+				showMessage("사원 메시지 테이블 생성 완료");
+				this.dispose();
+			} else {
+				showMessage("사원 메시지 테이블 생성 실패");
+			}
+			cnt = dao.createMsgView(msgTableName);
+			if (cnt > 0) {
+				showMessage("사원 메시지 뷰 생성 완료");
+				this.dispose();
+			} else {
+				showMessage("사원 메시지 뷰 생성 실패");
+			}
+			intra.card.show(intra.pCenter, "pAdmin");
 		}
     }
     

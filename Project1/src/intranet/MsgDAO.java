@@ -170,10 +170,8 @@ public class MsgDAO {
 			// insert문 작성
 			String sql="insert into "+tableName
 					+" values("+tableName+"_seq.nextval,?,?,?,?,sysdate,?)";
-			// System.out.println(msg.toString());
 			ps=con.prepareStatement(sql);
-			// System.out.println(sql);
-			// System.out.println(msg.toString());
+			System.out.println(sql);
 			ps.setString(1, msg.getS_R());
 			ps.setInt(2, msg.getEmpid());
 			ps.setString(3, msg.getTitle());
