@@ -12,8 +12,8 @@
  <h3>3) 개발 기간 : 2019.11.28 - 2019.12.06(10일)</h3><br>
  <h2>3. 개발 환경</h2>
  <h3>1) 사용 언어 : JAVA</h3>
- <h3>2) 사용 툴 : Eclipse, SQLDevelopter, MySQL Workbench, Netbeans</h3>
- <h2>3. 구현 기능 및 핵심 기술</h2>
+ <h3>2) 사용 툴 : Eclipse, SQLDevelopter, MySQL Workbench, Netbeans</h3><br>
+ <h2>4. 구현 기능 및 핵심 기술</h2>
  <h3>1) 주요 구현 기능</h3>
  <h4>로그인<br>
      사원 등록<br>
@@ -33,9 +33,8 @@
   <h3>2) 핵심 기술</h3>
   <h4>JFrame UI 구현<br>
      Database 설계<br>
-     JDBC를 이용한 Database 연동<br></h4><br>
-	
-<h2>4. 프로그램 구성</h2>
+     JDBC를 이용한 Database 연동<br></h4><br>	
+<h2>5. 프로그램 구성</h2>
 <img src = "https://user-images.githubusercontent.com/41276647/71144802-a6468400-2262-11ea-82b5-a9b8a95db705.png" width = "90%"></img>
 
 
