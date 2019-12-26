@@ -38,7 +38,7 @@
 <img src = "https://user-images.githubusercontent.com/41276647/71144802-a6468400-2262-11ea-82b5-a9b8a95db705.png" width = "90%"></img>
 <br>
 <h2>6. 데이터베이스 구조</h2>
-<img src = "https://user-images.githubusercontent.com/41276647/71147764-270a7d80-226d-11ea-96e9-1d15e8acf856.png" width = "90%"></img>
+<img src = "https://user-images.githubusercontent.com/58279421/71457636-31cf9000-27e2-11ea-9d5c-d5896a3f9132.png" width = "90%"></img>
 <br>
 <h2>7. 스크린 샷</h2>
 <img src = "https://user-images.githubusercontent.com/41276647/71145233-3802c100-2264-11ea-8bc7-8953c6b1fc9a.JPG" width = "90%"></img>
