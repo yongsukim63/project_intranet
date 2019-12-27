@@ -1039,7 +1039,7 @@ public class Intra extends JFrame {
     			idx=(Integer)objIdx;
     			
     			//[2]클릭시 읽기 패널로 전환
-    			card.show(pCenter, "read");
+    			card.show(pCenter, "pNoticeRead");
     			
     			//[3]전환한 읽기 패널에 인덱스와 일치하는 정보 붙임
     			NoticeVO noticeRead=dao.readNotice(idx);
