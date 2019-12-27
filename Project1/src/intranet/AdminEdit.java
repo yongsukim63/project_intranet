@@ -7,10 +7,6 @@ import java.util.Date;
 import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author 2class-004
- */
 public class AdminEdit extends javax.swing.JFrame {
 
     /**
